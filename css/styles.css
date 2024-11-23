@@ -4,12 +4,19 @@
     --color-brand-light: #819B57;
     --color-brand-dark: #465929;
 }
+
+/* Base */
 body {
     color: var(--color-primary-dark);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
 }
 ul {
     list-style-type: none;
 }
+
+/* Button */
 .button {
     color: var(--color-primary-light);
     background-color: var(--color-brand-light);
@@ -21,31 +28,49 @@ ul {
     background-color: transparent;
     color: var(--color-brand-dark);
 }
+
+/* Link */
 .link {
     color: var(--color-primary-light);
+    text-decoration: none;
 }
 .link:hover {
     color: var(--color-brand-light);
 }
+
+/* Hero section */
 .hero-title {
     color: var(--color-primary-light);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 128px;
+    font-weight: 900;
 }
 .hero-title .accent {
     color: var(--color-brand-light);
 }
+
+/* Advantages section */
 .advantages-list {
     background-color: var(--color-brand-light);
     color: var(--color-primary-light);
 }
+
+/* H2 */
 .section-title {
     color: var(--color-primary-dark);
 }
 .section-title .accent {
     color: var(--color-brand-dark);
 }
-p .capital-letters {
-    text-transform: uppercase;
+
+/* Traditions section*/
+.traditions-text .brand {
+    color: var(--color-brand-light);
+    font-weight: 600;
 }
-p .accent {
+
+.traditions-text .uppercase {
+    text-transform: uppercase;
     color: var(--color-brand-light);
 }
