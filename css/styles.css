@@ -83,6 +83,7 @@ address {
 .button:hover {
     background-color: transparent;
     color: var(--color-brand-dark);
+    border-color: currentColor;
 }
 
 /* Link */
@@ -572,6 +573,3 @@ address {
     color: var(--color-primary-dark);
     text-underline-offset: 4px;
 }
-
-
-
