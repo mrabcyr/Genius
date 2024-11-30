@@ -61,7 +61,6 @@
 .footer-icons {
     display: flex;
     gap: 22px;
-    padding-top: 16px;
 }
 
 .address-info {
@@ -77,6 +76,7 @@
     font-size: 16px;
     font-weight: 300;
     text-decoration: none;
+    padding-bottom: 16px;
 }
 
 .address-link:hover {

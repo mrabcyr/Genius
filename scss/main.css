@@ -74,6 +74,7 @@ address {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  font-size: 18px;
 }
 
 .button:hover {
@@ -90,6 +91,10 @@ address {
 
 .link:hover {
   color: var(--color-brand-normal);
+}
+
+.footer-link {
+  padding-bottom: 16px;
 }
 
 .header-container {
@@ -172,6 +177,10 @@ address {
   margin-bottom: 42px;
 }
 
+.traditions-text {
+  padding-bottom: 42px;
+}
+
 .traditions-text .brand {
   color: var(--color-brand-normal);
   font-weight: 600;
@@ -184,6 +193,7 @@ address {
 
 .traditions-text:last-child {
   max-width: 336px;
+  padding-bottom: 0;
 }
 
 .baker-man {
@@ -352,6 +362,11 @@ address {
   width: 616px;
 }
 
+.contacts-text {
+  margin-bottom: 42px;
+  color: var(--color-brand-dark);
+}
+
 .contacts-map {
   flex-shrink: 0;
   border: none;
@@ -421,7 +436,6 @@ address {
 .footer-icons {
   display: flex;
   gap: 22px;
-  padding-top: 16px;
 }
 
 .address-info {
@@ -437,6 +451,7 @@ address {
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;
+  padding-bottom: 16px;
 }
 
 .address-link:hover {
