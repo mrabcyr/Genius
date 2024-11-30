@@ -10,6 +10,10 @@
 }
 
 .format-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     border-radius: 16px;
     padding: 24px;
     height: 444px;
@@ -26,22 +30,13 @@
     transform: scale(1.05);
 }
 
-.walrus-card {
-    color: var(--color-primary-light);
-    background-image: url('../images/Walrus.jpg');
-    background-repeat: no-repeat;
-}
-
-.horseshoe-card {
-    color: var(--color-primary-light);
-    background-image: url('../images/Horseshoe.jpg');
-    background-repeat: no-repeat;
-}
-
-.handlebar-card {
-    color: var(--color-primary-light);
-    background-image: url('../images/Handlebar.jpg');
-    background-repeat: no-repeat;
+.format-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .formats-item {
@@ -55,9 +50,12 @@
 .format-title {
     font-size: 24px;
     font-weight: 600;
+    color: var(--color-primary-light);
+    margin-bottom: 16px;
 }
 
 .formats-text {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 500;    
+    color: var(--color-primary-light);
 }
