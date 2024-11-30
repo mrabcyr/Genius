@@ -1,0 +1,63 @@
+.formats-container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.formats-list {
+    display: flex;
+    gap: 20px;
+}
+
+.format-card {
+    border-radius: 16px;
+    padding: 24px;
+    height: 444px;
+    background-image: linear-gradient(
+        180deg,
+        rgba(49, 38, 26, 0) 55.21%,
+        rgba(49, 38, 26, 0.71) 72.92%,
+        #31261a 100%
+        );    
+    transition: transform 0.3s;    
+}
+
+.format-card:hover {
+    transform: scale(1.05);
+}
+
+.walrus-card {
+    color: var(--color-primary-light);
+    background-image: url('../images/Walrus.jpg');
+    background-repeat: no-repeat;
+}
+
+.horseshoe-card {
+    color: var(--color-primary-light);
+    background-image: url('../images/Horseshoe.jpg');
+    background-repeat: no-repeat;
+}
+
+.handlebar-card {
+    color: var(--color-primary-light);
+    background-image: url('../images/Handlebar.jpg');
+    background-repeat: no-repeat;
+}
+
+.formats-item {
+    flex-basis: calc((100% - 40px) / 3);
+}
+
+.formats-title {
+    margin-bottom: 80px;
+}
+
+.format-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.formats-text {
+    font-size: 14px;
+    font-weight: 300;
+}

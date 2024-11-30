@@ -1,0 +1,33 @@
+.header-container {
+    padding-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.header-and-hero-section {
+    background-image: linear-gradient(
+    102.76deg,
+    rgba(18, 18, 17, 0.78) 2.03%,
+    rgba(18, 18, 17, 0.6) 58.46%,
+    rgba(18, 18, 17, 0) 90.36%
+    ),
+    url('../images/Hero-section\ background-color.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
