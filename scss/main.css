@@ -21,11 +21,30 @@ body {
   line-height: 1.5;
 }
 
+.section {
+  padding: 48px 0;
+}
+
 .section-title {
   color: var(--color-primary-dark);
   font-size: 64px;
   font-weight: 900;
   line-height: 1.3;
+}
+
+.section-title.centered {
+  text-align: center;
+}
+
+.section-title .accent {
+  color: var(--color-brand-dark);
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -55,15 +74,16 @@ address {
   overflow: hidden;
 }
 
-.section {
-  padding: 48px 0;
+.text-brand {
+  color: var(--color-brand-normal);
 }
 
-.container {
-  width: 100%;
-  max-width: 1288px;
-  margin: 0 auto;
-  padding: 0 24px;
+.text-bold {
+  font-weight: 600;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 .button {
@@ -97,21 +117,21 @@ address {
   padding-bottom: 16px;
 }
 
-.header-container {
+.header__container {
   padding-top: 32px;
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
-.header-nav {
+.header__nav {
   display: flex;
   align-items: center;
   flex-grow: 1;
   gap: 40px;
 }
 
-.header-menu {
+.header__menu {
   display: flex;
   gap: 64px;
   flex-grow: 1;
@@ -128,8 +148,7 @@ address {
 .hero-section {
   padding: 272px 0;
 }
-
-.hero-title {
+.hero-section__title {
   color: var(--color-primary-light);
   font-family: "Poppins", sans-serif;
   text-align: center;
@@ -138,35 +157,28 @@ address {
   margin-bottom: 0;
 }
 
-.hero-title .accent {
-  color: var(--color-brand-normal);
-}
-
 .advantages-section {
   padding: 16px 0;
   background-color: var(--color-brand-normal);
 }
-
-.advantages-list {
+.advantages-section__list {
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
-
-.advantages-item {
+.advantages-section__item {
   color: var(--color-primary-light);
   font-size: 20px;
   font-weight: 300;
 }
 
-.traditions-container {
+.traditions-section {
+  padding-top: 96px;
+}
+.traditions-section .traditions-section-container {
   display: flex;
   justify-content: space-between;
   gap: 40px;
-}
-
-.traditions-section {
-  padding-top: 96px;
 }
 
 .traditions-content {
@@ -181,16 +193,6 @@ address {
   padding-bottom: 42px;
 }
 
-.traditions-text .brand {
-  color: var(--color-brand-normal);
-  font-weight: 600;
-}
-
-.traditions-text .uppercase {
-  text-transform: uppercase;
-  color: var(--color-brand-normal);
-}
-
 .traditions-text:last-child {
   max-width: 336px;
   padding-bottom: 0;
@@ -198,14 +200,6 @@ address {
 
 .baker-man {
   border-radius: 228px 228px 4px 4px;
-}
-
-.section-title.centered {
-  text-align: center;
-}
-
-.section-title .accent {
-  color: var(--color-brand-dark);
 }
 
 .chefs-title {

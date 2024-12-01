@@ -1,12 +1,14 @@
-.traditions-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-}
-
 .traditions-section {
     padding-top: 96px;
+
+    .traditions-section-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    
 }
+
 
 .traditions-content {
     max-width: 710px;
@@ -18,16 +20,6 @@
 
 .traditions-text {
     padding-bottom: 42px;
-}
-
-.traditions-text .brand {
-    color: var(--color-brand-normal);
-    font-weight: 600;
-}
-
-.traditions-text .uppercase {
-    text-transform: uppercase;
-    color: var(--color-brand-normal);
 }
 
 .traditions-text:last-child {
