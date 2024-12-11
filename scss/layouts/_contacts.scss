@@ -1,24 +1,36 @@
-.contact-section {
+.contacts-section {
     padding-bottom: 96px;
+
+    &__container {
+        display: flex;
+        gap: 32px;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        width: 616px;
 }
 
-.contacts-container {
-    display: flex;
-    gap: 32px;
+    &__text {
+        margin-bottom: 42px;
+        color: var(--color-brand-dark);
 }
 
-.contact-title {
-    margin-bottom: 16px;
-    width: 616px;
+   &__map {
+        flex-shrink: 0;
+        border: none;
+        border-radius: 16px;
+        
+}   
+    &__form-field {
+        margin-bottom: 24px;
+}   
+
+    &__button {
+        margin: 0 auto 16px;
+        display: block;
+}
 }
 
-.contacts-text {
-    margin-bottom: 42px;
-    color: var(--color-brand-dark);
-}
 
-.contacts-map {
-    flex-shrink: 0;
-    border: none;
-    border-radius: 16px;
-}
+

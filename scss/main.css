@@ -24,20 +24,14 @@ body {
 .section {
   padding: 48px 0;
 }
-
-.section-title {
+.section__title {
   color: var(--color-primary-dark);
   font-size: 64px;
   font-weight: 900;
   line-height: 1.3;
 }
-
-.section-title.centered {
+.section__title--centered {
   text-align: center;
-}
-
-.section-title .accent {
-  color: var(--color-brand-dark);
 }
 
 .container {
@@ -76,6 +70,10 @@ address {
 
 .text-brand {
   color: var(--color-brand-normal);
+}
+
+.text-brand-dark {
+  color: var(--color-brand-dark);
 }
 
 .text-bold {
@@ -175,25 +173,21 @@ address {
 .traditions-section {
   padding-top: 96px;
 }
-.traditions-section .traditions-section-container {
+.traditions-section__container {
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
-
-.traditions-content {
+.traditions-section__content {
   max-width: 710px;
 }
-
-.traditions-title {
+.traditions-section__title {
   margin-bottom: 42px;
 }
-
-.traditions-text {
+.traditions-section__text {
   padding-bottom: 42px;
 }
-
-.traditions-text:last-child {
+.traditions-section__text:last-child {
   max-width: 336px;
   padding-bottom: 0;
 }
@@ -202,75 +196,69 @@ address {
   border-radius: 228px 228px 4px 4px;
 }
 
-.chefs-title {
+.chefs-section__title {
   display: block;
   position: relative;
   margin: 0 auto 80px;
 }
-
-.chefs-title::before,
-.chefs-title::after {
+.chefs-section__title::before, .chefs-section__title::after {
   position: absolute;
   width: 352px;
   bottom: 24px;
   border: 2px solid var(--color-brand-light);
   content: "";
 }
-
-.chefs-title::before {
+.chefs-section__title::before {
   left: 0;
 }
-
-.chefs-title::after {
+.chefs-section__title::after {
   right: 0;
 }
-
-.chef-title {
-  font-size: 40px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
-.chefs-list {
+.chefs-section__list {
   display: flex;
   gap: 30px;
+}
+.chefs-section__item {
+  flex-basis: calc((100% - 30px) / 2);
 }
 
 .chef-card {
   display: flex;
   gap: 30px;
 }
-
-.chef-text p {
-  margin-bottom: 24px;
-}
-
-.chef-text p:last-child {
-  margin-bottom: 0;
-}
-
-.chef-text p:first-child {
-  margin-top: 36px;
-}
-
-.chefs-item {
-  flex-basis: calc((100% - 30px) / 2);
-}
-
-.chef-photo {
+.chef-card__photo {
   border-radius: 4px 4px 4px 200px;
   box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
+.chef-card__title {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.chef-card__text {
+  margin-bottom: 24px;
+}
+.chef-card__text:last-child {
+  margin-bottom: 0;
+}
+.chef-card__text:first-child {
+  margin-top: 36px;
+}
 
-.formats-container {
+.formats-section__container {
   display: flex;
   align-items: center;
   gap: 32px;
 }
-
-.formats-list {
+.formats-section__title {
+  margin-bottom: 80px;
+}
+.formats-section__list {
   display: flex;
   gap: 20px;
+}
+.formats-section__item {
+  flex-basis: calc((100% - 40px) / 3);
 }
 
 .format-card {
@@ -284,12 +272,10 @@ address {
   background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, #31261a 100%);
   transition: transform 0.3s;
 }
-
 .format-card:hover {
   transform: scale(1.05);
 }
-
-.format-image {
+.format-card__image {
   position: absolute;
   left: 0;
   top: 0;
@@ -297,23 +283,13 @@ address {
   height: 100%;
   z-index: -1;
 }
-
-.formats-item {
-  flex-basis: calc((100% - 40px) / 3);
-}
-
-.formats-title {
-  margin-bottom: 80px;
-}
-
-.format-title {
+.format-card__title {
   font-size: 24px;
   font-weight: 600;
   color: var(--color-primary-light);
   margin-bottom: 16px;
 }
-
-.formats-text {
+.format-card__text {
   font-size: 14px;
   font-weight: 500;
   color: var(--color-primary-light);
@@ -342,29 +318,45 @@ address {
   transform: rotate(180deg);
 }
 
-.contact-section {
+.contacts-section {
   padding-bottom: 96px;
 }
-
-.contacts-container {
+.contacts-section__container {
   display: flex;
   gap: 32px;
 }
-
-.contact-title {
+.contacts-section__title {
   margin-bottom: 16px;
   width: 616px;
 }
-
-.contacts-text {
+.contacts-section__text {
   margin-bottom: 42px;
   color: var(--color-brand-dark);
 }
-
-.contacts-map {
+.contacts-section__map {
   flex-shrink: 0;
   border: none;
   border-radius: 16px;
+}
+.contacts-section__form-field {
+  margin-bottom: 24px;
+}
+.contacts-section__button {
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.form-terms {
+  margin: 0 auto;
+  max-width: 210px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+.form-terms__link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 4px;
 }
 
 .footer {
@@ -471,7 +463,6 @@ address {
   visibility: visible;
   transition: opacity 0.5s, visibility 0.5s;
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -479,6 +470,7 @@ address {
 }
 
 .modal {
+  position: relative;
   width: 100%;
   max-width: 880px;
   height: 100%;
@@ -486,7 +478,6 @@ address {
   padding: 128px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
-  position: relative;
   overflow-y: auto;
 }
 
@@ -496,17 +487,20 @@ address {
   top: 40px;
 }
 
-.form-field {
-  margin-bottom: 32px;
+.modal__button {
+  display: block;
+  margin: 0 auto 24px;
 }
 
-.form-label {
+.input {
+  margin-bottom: 32px;
+}
+.input__label {
   left: 42px;
   top: 16px;
   color: var(--color-secondary-dark);
 }
-
-.form-input {
+.input__control {
   padding: 16px 42px;
   font-size: 16px;
   line-height: 1.17;
@@ -515,47 +509,23 @@ address {
   border-radius: 8px;
   background-color: transparent;
 }
-
-.form-input:focus {
+.input__control:focus {
   border-color: var(--color-brand-normal);
   outline: none;
 }
-
-.form-input::-moz-placeholder {
+.input__control::-moz-placeholder {
   font-size: 16px;
   line-height: 1.17;
   color: var(--color-secondary-dark);
 }
-
-.form-input::placeholder {
+.input__control::placeholder {
   font-size: 16px;
   line-height: 1.17;
   color: var(--color-secondary-dark);
 }
-
-.form-input:focus::-moz-placeholder {
+.input__control:focus::-moz-placeholder {
   color: var(--color-primary-dark);
 }
-
-.form-input:focus::placeholder {
+.input__control:focus::placeholder {
   color: var(--color-primary-dark);
-}
-
-.form-button {
-  margin: 0 auto 24px;
-  display: block;
-}
-
-.form-terms {
-  margin: 0 auto;
-  max-width: 210px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.form-terms-link {
-  color: var(--color-primary-dark);
-  text-underline-offset: 4px;
 }/*# sourceMappingURL=main.css.map */

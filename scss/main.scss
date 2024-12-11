@@ -6,8 +6,6 @@
 
 @import './utils/texts';
 
-@import './components/general';
-
 @import './components/buttons';
 
 @import './components/links';
@@ -22,14 +20,20 @@
 
 @import './layouts/chefs';
 
+@import './components/chef-card';
+
 @import './layouts/formats';
+
+@import './components/format-card';
 
 @import './components/carousel';
 
 @import './layouts/contacts';
 
+@import './components/form-terms';
+
 @import './layouts/footer';
 
 @import './layouts/modal';
 
-@import './components/form';
+@import './components/input';

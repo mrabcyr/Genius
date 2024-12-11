@@ -11,15 +11,16 @@
     justify-content: center;
     visibility: visible;
     transition: opacity 0.5s, visibility 0.5s;
-}
 
-.backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 .modal {
+    position: relative;
     width: 100%;
     max-width: 880px;
     height: 100%;
@@ -27,7 +28,6 @@
     padding: 128px;
     background-color: var(--color-primary-light);
     border-radius: 32px;
-    position: relative;
     overflow-y: auto;
 }
 
@@ -35,4 +35,9 @@
     position: absolute;
     right: 40px;
     top: 40px;
+}
+
+.modal__button {
+    display: block;
+    margin: 0 auto 24px;
 }
