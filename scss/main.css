@@ -481,6 +481,21 @@ address {
   overflow-y: auto;
 }
 
+.modal__header {
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 60px;
+  margin-bottom: 4px;
+}
+
+.modal__text {
+  display: flex;
+  justify-content: center;
+  color: var(--color-brand-dark);
+  margin-bottom: 72px;
+}
+
 .modal-btn-close {
   position: absolute;
   right: 40px;
