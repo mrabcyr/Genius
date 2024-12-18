@@ -18,5 +18,15 @@
 }
 
 .carousel-button.next {
-    transform: rotate(180deg);
+    position: absolute;
+    top: 50%;
+    right: -53px;
+    transform: rotate(180deg) translateY(50%);
+}
+
+.carousel-button.prev {
+    position: absolute;
+    top: 50%;
+    left: -104px;
+    transform: translateY(-50%);
 }

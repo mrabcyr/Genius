@@ -140,8 +140,9 @@ img {
 
 .swiper-pagination {
   position: relative;
-  margin-top: 20px;
+  margin-top: 32px;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 24px;
   text-align: center;
@@ -486,12 +487,6 @@ img {
   }
 }
 
-.format-card {
-  transition: transform 0.3s;
-}
-.format-card:hover {
-  transform: scale(1.05);
-}
 .format-card__container {
   position: relative;
   display: flex;
@@ -544,7 +539,17 @@ img {
 }
 
 .carousel-button.next {
-  transform: rotate(180deg);
+  position: absolute;
+  top: 50%;
+  right: -53px;
+  transform: rotate(180deg) translateY(50%);
+}
+
+.carousel-button.prev {
+  position: absolute;
+  top: 50%;
+  left: -104px;
+  transform: translateY(-50%);
 }
 
 .contacts-section {
