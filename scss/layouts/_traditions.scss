@@ -1,14 +1,25 @@
 .traditions-section {
-    padding-top: 96px;
+    padding-top: 40px;
+
+    @media screen and (min-width: $bp-desktop) {
+        padding-top: 96px;
+    }
 
     &__container {
         display: flex;
         justify-content: space-between;
         gap: 40px;
+        align-items: flex-start;
     }
 
     &__content {
         max-width: 710px;
+        display: block;
+        margin: 0 auto;
+
+        @media screen and (min-width: $bp-desktop) {
+            
+        }
     }
 
     &__title {
@@ -23,8 +34,13 @@
     max-width: 336px;
     padding-bottom: 0;
 }
-}
 
-.baker-man {
-    border-radius: 228px 228px 4px 4px;
+    &__image {
+        display: none;
+    
+        @media screen and (min-width: $bp-desktop) {
+            display: block;
+            border-radius: 228px 228px 4px 4px;
+        }
+}
 }

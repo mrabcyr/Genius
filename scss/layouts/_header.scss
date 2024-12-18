@@ -1,8 +1,12 @@
 .header__container {
-    padding-top: 32px;
+    padding-top: 16px;
     display: flex;
     align-items: center;
     gap: 40px;
+
+    @media screen and (min-width: $bp-desktop) {
+        padding-top: 32px;
+    }
 }
 
 .header__nav {
@@ -13,13 +17,49 @@
 }
 
 .header__menu {
-    display: flex;
-    gap: 64px;
-    flex-grow: 1;
-    justify-content: center;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+        display: flex;
+        gap: 64px;
+        flex-grow: 1;
+        justify-content: center;
+    }
+}
+
+.header__button {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+        display: block;
+    }
+}
+
+.header__burger {
+    display: block;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+
+    @media screen and (min-width: $bp-desktop) {
+        display: none;
+    }
 }
 
 .header-and-hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-and-hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(
     102.76deg,
     rgba(18, 18, 17, 0.78) 2.03%,
@@ -30,4 +70,15 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
+    z-index: -1;
+
+    @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            102.76deg,
+            rgba(18, 18, 17, 0.78) 2.03%,
+            rgba(18, 18, 17, 0.6) 58.46%,
+            rgba(18, 18, 17, 0) 90.36%
+            ),
+            url(('../images/Hero-section\ background-color@2x.jpg'));
+    }
 }

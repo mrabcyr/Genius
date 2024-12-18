@@ -1,13 +1,31 @@
 .hero-section {
-    padding: 272px 0;
+    padding: 124px 34px 34px 34px;
+    
+    @media screen and (min-width: $bp-desktop) {
+        padding: 272px 0;
+    }
 
     &__title {
         color: var(--color-primary-light);
         font-family: 'Poppins', sans-serif;
         text-align: center;
-        font-size: 128px;
+        font-size: 67px;
         font-weight: 900;
+        line-height: 1;
+        margin-bottom: 48px;
+
+    @media screen and (min-width: $bp-desktop) {
+        font-size: 128px;
+        line-height: 1.5;
         margin-bottom: 0;
+    }    
     }
     
+    &__button {
+        display: block;
+        margin: 0 auto;
+        @media screen and (min-width: $bp-desktop) {
+            display: none;
+        }
+    }
 }

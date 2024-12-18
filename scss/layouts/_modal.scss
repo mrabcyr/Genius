@@ -46,10 +46,17 @@
     margin-bottom: 72px;
 }
 
-.modal-btn-close {
+.modal__btn-close {
     position: absolute;
     right: 40px;
     top: 40px;
+    border: none;
+    background-color: transparent;
+
+    &__svg {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .modal__button {
