@@ -7,10 +7,11 @@
     cursor: pointer;
     font-weight: 600;
     font-size: 18px;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--color-brand-dark);
+        border-color: currentColor;
+    }
 }
 
-.button:hover {
-    background-color: transparent;
-    color: var(--color-brand-dark);
-    border-color: currentColor;
-}

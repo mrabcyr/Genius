@@ -2,11 +2,13 @@
     color: var(--color-primary-light);
     text-decoration: none;
     transition: color 0.5s;
+
+    &:hover {
+        color: var(--color-brand-normal);
+    }
 }
 
-.link:hover {
-    color: var(--color-brand-normal);
-}
+
 
 .footer-link {
     padding-bottom: 16px;

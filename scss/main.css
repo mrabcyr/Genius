@@ -80,6 +80,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .visually-hidden {
@@ -117,7 +119,6 @@ img {
   font-weight: 600;
   font-size: 18px;
 }
-
 .button:hover {
   background-color: transparent;
   color: var(--color-brand-dark);
@@ -129,7 +130,6 @@ img {
   text-decoration: none;
   transition: color 0.5s;
 }
-
 .link:hover {
   color: var(--color-brand-normal);
 }
@@ -520,7 +520,7 @@ img {
 }
 
 .carousel-button {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 44px;
@@ -532,10 +532,14 @@ img {
   border: 1px solid var(--color-primary-dark);
   fill: var(--color-primary-dark);
 }
-
 .carousel-button:hover {
   background-color: var(--color-primary-dark);
   fill: var(--color-primary-light);
+}
+@media screen and (min-width: 1280px) {
+  .carousel-button {
+    display: flex;
+  }
 }
 
 .carousel-button.next {
@@ -557,7 +561,14 @@ img {
 }
 .contacts-section__container {
   display: flex;
-  gap: 32px;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  .contacts-section__container {
+    flex-direction: row;
+    gap: 32px;
+  }
 }
 .contacts-section__title {
   margin-bottom: 16px;
@@ -571,6 +582,23 @@ img {
   flex-shrink: 0;
   border: none;
   border-radius: 16px;
+  margin: 0 --24px;
+}
+@media screen and (min-width: 768px) {
+  .contacts-section__map {
+    width: 320px;
+    height: 500px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contacts-section__map {
+    width: 600px;
+    height: 595px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .contacts-section__form-field {
   margin-bottom: 24px;
@@ -601,8 +629,13 @@ img {
   background-position: center;
   background-size: cover;
   padding: 32px 100px 32px 100px;
+  text-align: center;
 }
-
+@media screen and (min-width: 768px) {
+  .footer {
+    text-align: left;
+  }
+}
 .footer::before {
   position: absolute;
   background-image: url("../images/decor-bread-small.png");
@@ -613,7 +646,6 @@ img {
   left: 0;
   content: "";
 }
-
 .footer::after {
   position: absolute;
   background-image: url("../images/decor-bread-large.png");
@@ -623,64 +655,78 @@ img {
   right: 0;
   content: "";
 }
-
-.footer-container {
+.footer__container {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
-
-.footer-nav {
-  flex-basis: 50%;
+@media screen and (min-width: 768px) {
+  .footer__container {
+    flex-direction: row;
+  }
+}
+.footer__nav {
   display: flex;
   gap: 20px;
+  flex-direction: column;
 }
-
-.footer-logo {
+@media screen and (min-width: 768px) {
+  .footer__nav {
+    flex-basis: 50%;
+    flex-direction: row;
+  }
+}
+.footer__logo {
   flex-grow: 1;
 }
-
-.footer-menu {
+.footer__menu {
   flex-grow: 1;
 }
-
-.footer-address-list {
-  flex-grow: 1;
-}
-
-.footer-address {
-  flex-basis: 50%;
+.footer__address {
   display: flex;
   gap: 20px;
+  flex-direction: column;
 }
-
-.footer-icons {
-  display: flex;
-  gap: 22px;
+@media screen and (min-width: 768px) {
+  .footer__address {
+    flex-direction: row;
+    flex-basis: 50%;
+  }
 }
-
-.address-info {
+.footer__address__list {
   flex-grow: 1;
 }
-
-.address-icon {
-  fill: var(--color-primary-light);
-}
-
-.address-link {
+.footer__address__link {
   color: var(--color-primary-light);
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;
   padding-bottom: 16px;
 }
-
-.address-link:hover {
-  color: var(--color-brand-normal);
+.footer__address__info {
+  flex-grow: 1;
 }
-
-.address-copyright {
+.footer__address__info__copyright {
   font-size: 14px;
   color: #A18268;
+}
+.footer__address__info__link {
+  color: var(--color-primary-light);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  padding-bottom: 16px;
+}
+.footer__address__icon {
+  fill: var(--color-primary-light);
+}
+.footer__address__link:hover {
+  color: var(--color-brand-normal);
+}
+.footer__icons {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
 }
 
 .backdrop {
@@ -709,10 +755,15 @@ img {
   max-width: 880px;
   height: 100%;
   max-height: 880px;
-  padding: 128px;
+  padding: 48px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
   overflow-y: auto;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    padding: 128px;
+  }
 }
 
 .modal__header {

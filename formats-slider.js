@@ -2,15 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
 const swiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 1,
-    spaceBetween: 20,
     breakpoints: {
-        480: {
+        800: {
           slidesPerView: 2, 
-          spaceBetween: 20, 
         },
-        768: {
+        1280: {
           slidesPerView: 3,
-          spaceBetween: 20,
         }
       },
   
